@@ -13,4 +13,9 @@ resultDictionary[2]=$result2
 resultDictionary[3]=$result3
 resultDictionary[4]=$result4
 
-echo "Result - " ${resultDictionary[@]}
+echo "Result Dictionary- " ${resultDictionary[@]}
+for varx in ${resultDictionary[@]}
+do
+	resultArray[((i++))]=$varx
+done
+echo "Result Array - "${resultArray[@]}
