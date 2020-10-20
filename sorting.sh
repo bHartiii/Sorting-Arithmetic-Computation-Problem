@@ -6,4 +6,5 @@ echo "Entered inputs are - " $a $b $c
 result1=$((a+b*c))
 result2=$((a*b+c)) 
 result3=$((c+a/b))
-echo "Result - " $result1 $result2 $result3
+result4=$((a%b+c))
+echo "Result - " $result1 $result2 $result3 $result4
