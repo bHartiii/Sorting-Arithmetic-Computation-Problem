@@ -18,4 +18,17 @@ for varx in ${resultDictionary[@]}
 do
 	resultArray[((i++))]=$varx
 done
-echo "Result Array - "${resultArray[@]}
+
+for((i=0;i<=4;i++))
+do
+	for((j=i+1;j<4;j++))
+	do
+		if [ ${resultArray[$i]} -lt ${resultArray[$j]} ]
+		then
+			temp=${resultArray[$j]}
+			resultArray[$j]=${resultArray[$i]}
+			resultArray[$i]=$temp
+		fi
+	done
+done
+echo "Sorted array in descending order - "${resultArray[@]}
