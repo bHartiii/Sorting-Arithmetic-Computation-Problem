@@ -7,4 +7,10 @@ result1=$((a+b*c))
 result2=$((a*b+c)) 
 result3=$((c+a/b))
 result4=$((a%b+c))
-echo "Result - " $result1 $result2 $result3 $result4
+declare -i resultDictionary
+resultDictionary[1]=$result1
+resultDictionary[2]=$result2
+resultDictionary[3]=$result3
+resultDictionary[4]=$result4
+
+echo "Result - " ${resultDictionary[@]}
